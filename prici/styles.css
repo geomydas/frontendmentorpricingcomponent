@@ -94,6 +94,7 @@ header {
     padding: 5px;
   }
 
+  .circleone,
   .circle {
     background-color: white;
     height: 20px;
@@ -213,7 +214,7 @@ h2:nth-of-type(2) {
 /* main end */
 /* toggle start */
 .togg {
-  .circle {
+  .circleone {
     margin-left: 0;
     margin-right: 20px;
   }
@@ -236,13 +237,37 @@ h2:nth-of-type(2) {
   }
 }
 
+.toggdark {
+  .circle {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  * {
+    filter: grayscale() invert();
+    color: white;
+  }
+  .dark {
+    background-color: grey;
+    margin-top: -65px;
+    padding-top: 65px;
+  }
+  *:hover {
+    color: darkgray;
+  }
+
+  main div:nth-of-type(odd) {
+    background-color: lightslategray;
+  }
+}
+
 /* toggle end */
 @media (max-width: 950px) {
   main {
     flex-direction: column;
     gap: 24px;
 
-
-    div {border-radius: 10px !important;}
+    div {
+      border-radius: 10px !important;
+    }
   }
 }

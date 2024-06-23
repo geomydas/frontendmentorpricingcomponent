@@ -13,14 +13,23 @@
     />
   </head>
   <body>
+    <div class="dark">
     <header>
       <h1>Our Pricing</h1>
       <div class="toggle">
         <p>Annually</p>
         <button onclick="myFunction()">
-          <div class="circle" aria-hidden="true"></div>
+          <div class="circleone" aria-hidden="true"></div>
         </button>
         <p>Monthly</p>
+      </div>
+
+      <div class="toggle" style="margin-top: 15px">
+        <p>Dark </p>
+        <button onclick="dark()">
+          <div class="circle" aria-hidden="true"></div>
+        </button>
+        <p>Light</p>
       </div>
     </header>
     <main>
@@ -66,10 +75,16 @@
         <button>Learn More</button>
       </div>
     </main>
+   
+  </div>
     <script>
       function myFunction() {
         var element = document.body;
         element.classList.toggle("togg");
+      }
+      function dark() {
+        var element = document.body;
+        element.classList.toggle("toggdark");
       }
     </script>
   </body>
